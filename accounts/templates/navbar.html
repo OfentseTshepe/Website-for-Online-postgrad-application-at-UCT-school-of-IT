@@ -1,0 +1,19 @@
+{% load static %}
+<nav class="navbar navbar-inverse">
+    <div class="container-fluid">
+        <div class="navbar-header">
+            <img id="image" src="{% static "css/UCTlogo.svg" %}" alt="My image">
+            <p id="logo"></p>
+            <span class="navbar-caption-wrap"><a class="navbar-caption text-primary display-2" href="{% url 'accounts:welcome' %}">| School of IT</a></span>   
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar"></button>
+        </div>
+        <ul class="nav navbar-nav navbar-right">
+        <li class="nav-item"><a href="{% url 'accounts:welcome' %}"><span class="glyphicon glyphicon-user text-info"></span>{{ request.user.username }}</a></li>
+        <li class="nav-item"><a href="{% url 'accounts:list-application' %}"><span class="glyphicon glyphicon-edit text-info"></span>Overview</a></li>
+        <li class="nav-item"><a href="http://www.sit.uct.ac.za/sit/contact"><span class="glyphicon glyphicon-earphone text-info" target="blank"></span> Contacts</a></li>
+        {% block logout %}
+            <li class="nav-item"><a href="{% url 'account_logout' %}"><span class="glyphicon glyphicon-log-out text-danger"></span>logout</a></li>            
+        {% endblock logout %}
+        </ul>
+    </div>
+</nav>

@@ -1,0 +1,18 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<h3> Listing all person objects here </h3>
+    <ul>  
+    {% for person in address %}
+        <li>
+            {{ person }}
+            <a href="{{ person.get_delete_url }}"> <strong>delete</strong></a>
+            <br>
+            <a href="{{ person.get_update_url }}"> <strong>update</strong></a>
+        </li>
+    {% endfor %}   
+    </ul>
+    <a href="{% url 'accounts:person-add' %}" class="btn btn-primary btn-sm" role="button" aria-disabled="false">Previous</a>
+    <a href="{% url 'accounts:current-add' %}" class="btn btn-primary btn-sm" aria-disabled="false">Next</a>
+
+{% endblock content %}

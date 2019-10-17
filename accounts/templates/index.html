@@ -1,0 +1,50 @@
+{% load static %}
+{% load i18n %}
+{% load account socialaccount %}
+{% get_providers as socialaccount_providers %}
+
+<!DOCTYPE html>
+<html  >
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1">
+  <link rel="shortcut icon" href="{% static "assets/images/uct-logo.svg" %}" type="image/x-icon">
+  <title>UCT School of IT</title>  
+  <link rel="stylesheet" href="{% static "assets/Style.css" %}" >
+  <link rel="stylesheet" href="{% static "assets/more/css/additional.css" %}" type="text/css">
+</head>
+<body>
+  <section class="menu cid-rzNAfL93r1" once="menu" id="menu1-1">
+    <nav class="navbar navbar-expand beta-menu navbar-dropdown align-items-center navbar-toggleable-sm">
+        <div class="menu-logo">
+            <div class="navbar-brand">
+                <span class="navbar-logo">
+                    <a href="http://www.uct.ac.za/">
+                         <img src= "{% static "assets/images/uct-logo.svg" %}" alt="Favicon" title="UCT" style="height: 3.8rem;">
+                    </a>
+                </span>
+                <span class="navbar-caption-wrap"><a class="navbar-caption text-primary display-2" href="{% url 'accounts:index' %}">| School of IT</a></span>
+            </div>
+        </div>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <div class="navbar-buttons mbr-section-btn"><a class="btn btn-sm btn-primary display-5" href="{% url 'account_login' %}">Login</a></div>
+        </div>
+    </nav>
+</section>
+
+<section class="engine"><a href=""></a></section><section class="cid-rzNzy43r76 mbr-fullscreen" id="header2-0">
+    <div class="mbr-overlay" style="opacity: 0.3; background-color: rgb(15, 118, 153);"></div>
+    <div class="container align-center">
+        <div class="row justify-content-md-center">
+            <div class="mbr-white col-md-10">
+                <h1 class="mbr-section-title mbr-bold pb-3 mbr-fonts-style display-2"><span style="font-weight: normal;">Welcome To The </span><br>University of Cape Town&nbsp;<br></h1>
+                <h3 class="mbr-section-subtitle align-center mbr-light pb-3 mbr-fonts-style display-2"><strong>School of Information Technology</strong></h3>
+                <p class="mbr-text pb-3 mbr-fonts-style display-5">Post Graduate Applications</p>
+                <div class="mbr-section-btn"><a class="btn btn-md btn-primary display-7" 
+                href="{% url 'account_signup' %}"> Register</a></div>
+            </div>
+        </div>
+    </div>  
+</section>
+</body>
+</html>

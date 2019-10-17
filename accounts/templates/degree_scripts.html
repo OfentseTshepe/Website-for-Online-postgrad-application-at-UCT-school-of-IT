@@ -1,0 +1,716 @@
+<script>
+
+    var data = [
+        {
+            "name": "Algeria",
+            "degrees": [{"name": "Licence/Diplome de/Diplome d'Etudes Superieures",
+            "standard":"British Bachelor degree standard"},
+            {"name":"Magister",
+            "standard":"British Master's degree standard"}]
+        },
+
+        {
+            "name": "Angola",
+            "degrees":[{"name":"Bacharel",
+            "standard":"Diploma of Higher Education standard"},
+            {"name":"Licenciado",
+            "standard":"British Bachelor degree standard"},
+            {"name":"Doutorado",
+            "standard":"British Master's degree standard"}]
+        },
+
+        {
+            "name":"Argentina",
+            "degrees":[{"name":"Titulo/Grad de Licenciado/a/Titulo de",
+            "standard":"British Bachelor degree standard"},
+            {"name":"Titulo de Maetria/Magister",
+            "standard":"British Master's degree standard"}]
+        },
+
+        {
+            "name":"Australia",
+            "degrees":[{"name":"Bachelor degree",
+            "standard":"British Bachelor degree standard"},
+            {"name":"Bachelor degree (Honours)",
+            "standard":"British Bachelor (Honours) degree standard"},
+            {"name":"Master's degree",
+            "standard":"British Master's degree standard"}]
+        },
+
+        {
+            "name":"Austria",
+            "degrees":[{"name":"Fachhochschuldiplom/Diplom (FH)",
+            "standard":"British Bachelor degree standard"},
+            {"name":"Bachelor degree/Diplomstudium/ Magister",
+            "standard":"British Bachelor (Honours) degree standard"},
+            {"name":"Master's degree",
+            "standard":"British Master's degree standard"}]
+        },
+
+        {
+            "name":"Botswana",
+            "degrees":[{"name":"Bachelor degree",
+            "standard":"British Bachelor (Ordinary) degree standard"},
+            {"name":"Master's degree",
+            "standard":"British Master's degree standard"}]
+        },
+
+        {
+            "name":"Brazil",
+            "degrees":[{"name":"Titulo de Bacharel/Licenciado/a",
+            "standard":"British Bachelor degree standard"},
+            {"name":"Titulo de Mestre",
+            "standard":"British Master's degree standard"}]
+        },
+
+        {
+            "name":"Burundi",
+            "degrees":[{"name":"Diplome de Licence",
+            "standard":"Diploma of Higher Educations standard"},
+            {"name":"Diplome d'Etudes Approfondies",
+            "standard":"British Bachelor (Honours) degree standard"}]
+        },
+
+        {
+            "name":"Cameroon",
+            "degrees":[{"name":"Bachelor degree/Licence",
+            "standard":"British Bachelor (Ordinary) degree standard"},
+            {"name":"Maitrise/Master's degree",
+            "standard":"British Bachelor (Honours) degree standard"},
+            {"name":"Diplome d'Etudes Approfondies/Diplome d'Etudes Superieures Specilisees/Master's degree",
+            "standard":"British Master's degree standard"}]
+        },
+
+        {
+            "name":"Canada",
+            "degrees":[{"name":"Bachelor degree/Professional degree",
+            "standard":"British Bachelor degree standard"},
+            {"name":"Bachelor degree (Honours)",
+            "standard":"British Bachelor (Honours) degree standard"},
+            {"name":"Master of Philosophy/Master's degree/Maitrise",
+            "standard":"British Master's degree standard"}]
+        },
+
+        {
+            "name":"Central African Republic",
+            "degrees":[{"name":"Licence",
+            "standard":"Certificate of Higher Education standard"},
+            {"name":"Maitrise",
+            "standard":"British Bachelor (Ordinary) degree standard"}]
+        },
+
+        {
+            "name":"Chad",
+            "degrees":[{"name":"Licence",
+            "standard":"Certificate of Higher Education standard"},
+            {"name":"Maitrise",
+            "standard":"British Bachelor degree standard"},
+            {"name":"Diplome d'Etudes Approfondies/Diplome d'Etudes Superieures Specialisees",
+            "standard":"British Bachelor (Honours) degree standard"}]
+        },
+
+        {
+            "name":"Chile",
+            "degrees":[{"name":"Grad de Licenciado/Titulo (Professional) de",
+            "standard":"British Bachelor degree standard"},
+            {"name":"Magister's degree",
+            "standard":"British Master's degree standard"}]
+        },
+
+        {
+            "name":"Colombia",
+            "degrees":[{"name":"Licenciado/Titulo (Professional) de",
+            "standard":"British Bachelor degree standard"},
+            {"name":"Bachelor degree (Honours)",
+            "standard":"British Bachelor (Honours) degree standard"},
+            {"name":"Magister/Maestria",
+            "standard":"British Master's degree standard"}]
+        },
+
+        {
+            "name":"Congo",
+            "degrees":[{"name":"Licence",
+            "standard":"Diploma of Higher Education standard"},
+            {"name":"Maistrise/Diplome des Etudes Superieures",
+            "standard":"British Bachelor (Ordinary) degree standard"}]
+        },
+
+        {
+            "name":"Costa Rica",
+            "degrees":[{"name":"Bachiller",
+            "standard":"British Bachelor (Ordinary) degree standard"},
+            {"name":"Licenciado",
+            "standard":"British Bachelor (Honours) degree standard"},
+            {"name":"Maestria",
+            "standard":"British Master's degree standard"}]
+        },
+
+        {
+            "name":"Congo (the Democratic Republic of the)",
+            "degrees":[{"name":"Graduat",
+            "standard":"GCE Advances level/Scottish Advanced Higher standard"},
+            {"name":"Licence",
+            "standard":"Diploma of Higher Education standard"},
+            {"name":"Diplome d'Etudes Approfondies/Diplome d'Etudes Speciales",
+            "standard":"British Bachelor (Ordinary) degree standard"}]
+        },
+
+        {
+            "name":"Ecuador",
+            "degrees":[{"name":"Titulo de Licenciado/Titulo (Professional) de",
+            "standard":"British Bachelor degree standard"},
+            {"name":"Titulo de Magister",
+            "standard":"British Master's degree standard"}]
+        },
+
+        {
+            "name":"Egypt",
+            "degrees":[{"name":"Bachelor degree",
+            "standard":"BTEC/SQA Higher National Diploma (HND) standard/ Foundation degree standard"},
+            {"name":"Bachelor degree (from a public or private University)",
+            "standard":"British Bachelor degree standard"},
+            {"name":"Master's degree/Majister",
+            "standard":"British Master's degree standard"}]
+        },
+
+        {
+            "name":"Ethiopia",
+            "degrees":[{"name":"Bachelor degree",
+            "standard":"Diploma of Higher Education standard"},
+            {"name":"Master's degree",
+            "standard":"British Bachelor (Honours) degree"}]
+        },
+
+        {
+            "name":"Eritrea",
+            "degrees":[{"name":"Bachelor degree",
+            "standard":"Diploma of Higher Education standard"}]
+        },
+
+        {
+            "name":"France",
+            "degrees":[{"name":"Licence/Grad de Licence/Licence Professionalle/Grade de Licence before 2008",
+            "standard":"British Bachelor (Ordinary) degree standard"},
+            {"name":"Licence/Grad de Licence/Licence Professionalle/Grade de Licence after 2008",
+            "standard":"British Bachelor (Honours) degree standard"},
+            {"name":"Diplome d'Etudes Approfondies/Diplome d'Etudes Superieures Specialisees/Diplome de Master/Grade de Master/Magistére",
+            "standard":"British Master's degree standard"}]
+        },
+
+        {
+            "name":"Gabon",
+            "degrees":[{"name":"Licence",
+            "standard":"Diploma of Higher Education standard"},
+            {"name":"Master/Maitrise",
+            "standard":"British Bachelor (Ordinary) degree standard"}]
+        },
+
+        {
+            "name":"Ghana",
+            "degrees":[{"name":"Bachelor degree",
+            "standard":"British Bachelor degree standard"},
+            {"name":"Master's degree",
+            "standard":"British Master's degree standard"}]		
+        },
+
+        {
+            "name":"Germany",
+            "degrees":[{"name":"Bachelor degree",
+            "standard":"British Bachelor (Honours) degree standard"},
+            {"name":"Master's degree",
+            "standard":"British Master's degree standard"}]
+        },
+
+        {
+            "name":"Guinea",
+            "degrees":[{"name":"Licence",
+            "standard":"Diploma of Higher Education standard"},
+            {"name":"Master/Maitrise/Diplome d'Etudes Superieures/Diplome d'Etudes Approfondies",
+            "standard":"British Bachelor (Ordinary) degree standard"}]
+        },
+
+        {
+            "name":"Guyana",
+            "degrees":[{"name":"Bachelor degree (from University Of Guyana)",
+            "standard":"Diploma of Higher Education standard"},
+            {"name":"Master's degree (from University Of Guyana)",
+            "standard":"British Bachelor (Honours) degree standard"}]
+        },
+
+        {
+            "name":"India",
+            "degrees":[{"name":"Bachelor degree (Ordinary/Pass)",
+            "standard":"British Bachelor (Ordinary) degree standard"},
+            {"name":"Bachelor degree (Honours/Special/in a Professional subject)",
+            "standard":"British Bachelor (Honours) degree standard"},
+            {"name":"Master's degree",
+            "standard":"British Master's degree standard"}]
+        },
+
+        {
+            "name":"Iran",
+            "degrees":[{"name":"Bachelor degree (Licence/Karshenasi)",
+            "standard":"British Bachelor degree standard"},
+            {"name":"Master's degree (Karshenasi Ershad)",
+            "standard":"British Master's degree standard"}]
+        },
+
+        {
+            "name":"Ireland",
+            "degrees":[{"name":"Ordinary Bachelor degree",
+            "standard":"British Bachelor (Ordinary) degree standard"},
+            {"name":"Honours Bachelor degree",
+            "standard":"British Bachelor (Honours) degree standard"},
+            {"name":"Master's degree",
+            "standard":"British Master's degree standard"}]
+        },
+
+        {
+            "name":"Israel",
+            "degrees":[{"name":"Bachelor degree",
+            "standard":"British Bachelor degree standard"},
+            {"name":"Master's degree",
+            "standard":"British Master's degree standard"}]
+        },
+
+        {
+            "name":"Italy",
+            "degrees":[{"name":"Laurea",
+            "standard":"British Bachelor (Honours) degree standard"},
+            {"name":"Laurea Magistrale/Laurea Specialistica",
+            "standard":"British Master's degree standard"}]
+        },
+
+        {
+            "name":"Ivory Coast",
+            "degrees":[{"name":"Licence",
+            "standard":"Diploma of Higher Education standard"},
+            {"name":"Maitrise",
+            "standard":"British Bachelor (Ordinary) degree standard"},
+            {"name":"Diplome d'Etudes Approfondies/Diplome d'Etudes Superieures/Diplome d'Etudes Superieures Specialisees",
+            "standard":"British Bachelor (Honours) degree standard"},
+            {"name":"Doctorat de Specialite de Troisieme Cycle",
+            "standard":"British Master's degree standard"}]
+        },
+
+        {
+            "name":"Kenya",
+            "degrees":[{"name":"Bachelor degree",
+            "standard":"British Bachelor degree standard"},
+            {"name":"Master of Philosophy/Master's degree",
+            "standard":"British Master's degree standard"}]
+        },
+
+        {
+            "name":"Lesotho",
+            "degrees":[{"name":"Bachelor degree part 2 (further 2 years of study)",
+            "standard":"Diploma of Higher Education standard"},
+            {"name":"Master's degree",
+            "standard":"British Bachelor (Honours) degree standard"},
+            {"name":"Doctorate",
+            "standard":"British Master's degree standard"}]
+        },
+
+        {
+            "name":"Liberia",
+            "degrees":[{"name":"Bachelor degree",
+            "standard":"Diploma of Higher Education standard"},
+            {"name":"Master's degree",
+            "standard":"British Bachelor (Honours) degree standard"}]
+        },
+
+        {
+            "name":"Madagascar",
+            "degrees":[{"name":"Licence",
+            "standard":"Diploma of Higher Education standard"},
+            {"name":"Bachelor degree",
+            "standard":"British Bachelor degree standard"},
+            {"name":"Diplome d'Etudes Approfondies",
+            "standard":"British Bachelor (Honours) degree standard"}]
+        },
+
+        {
+            "name":"Malawi",
+            "degrees":[{"name":"Bachelor degree",
+            "standard":"Diploma of Higher Education standard"},
+            {"name":"Master's degree (from Mzuzu University/University of Malawi)",
+            "standard":"British Bachelor (Honours) degree standard"}]
+        },
+
+        {
+            "name":"Mali",
+            "degrees":[{"name":"Master/Diplôme de Maîtrise",
+            "standard":"Diploma of Higher Education standard"},
+            {"name":"Diplome d'Etudes Approfondies",
+            "standard":"British Bachelor (Honours) degree standard"}]
+        },
+
+        {
+            "name":"Mauritius",
+            "degrees":[{"name":"Bachelor degree",
+            "standard":"British Bachelor degree standard"},
+            {"name":"Master's degree",
+            "standard":"British Master's degree standard"}]
+        },
+
+        {
+            "name":"Mexico",
+            "degrees":[{"name":"Titulo de Licenciado/Titulo (Professional) de",
+            "standard":"British Bachelor degree standard"},
+            {"name":"Grado Academico de Maestria/Grado de Maestro",
+            "standard":"British Master's degree standard"}]
+        },
+
+        {
+            "name":"Morocco",
+            "degrees":[{"name":"Licence/Licence d'Etudes Fondamentales/Licence Professionalle/Maitrise/Diplome du Cycle Normal",
+            "standard":"British Bachelor degree standard"},
+            {"name":"Master/Master Specialise/Diplome d'Etudes Superieures Approfondies",
+            "standard":"British Master's degree standard"}]
+        },
+
+        {
+            "name":"Mozambique",
+            "degrees":[{"name":"Grau de Licenciado/a",
+            "standard":"British Bachelor (Ordinary) degree standard"},
+            {"name":"Grau de Mestre",
+            "standard":"British Bachelor (Honours) degree standard"}]
+        },
+
+        {
+            "name":"Namibia",
+            "degrees":[{"name":"Bachelor degree",
+            "standard":"Diploma of Higher Education standard"},
+            {"name":"Master's degree (Honours)",
+            "standard":"British Bachelor (Honours) degree standard"}]
+        },
+
+        {
+            "name":"New Zealand",
+            "degrees":[{"name":"Bachelor degree",
+            "standard":"British Bachelor (Ordinary) degree standard"},
+            {"name":"Bachelor degree (Honours)",
+            "standard":"British Bachelor (Honours) degree standard"},
+            {"name":"Master's degree",
+            "standard":"British Bachelor (Honours) degree standard"}]
+        },
+
+        {
+            "name":"Nigeria",
+            "degrees":[{"name":"Bachelor degree wit Honours",
+            "standard":"British Bachelor degree standard"},
+            {"name":"Master's degree",
+            "standard":"British Master's degree standard"}]
+        },
+
+        {
+            "name":"Pakistan",
+            "degrees":[{"name":"Bachelor of degree",
+            "standard":"British Bachelor (Ordinary) degree standard"},
+            {"name":"Master's degree (following a two or three - year Bachelor degree)",
+            "standard":"British Bachelor (Ordinary) degree standard"},
+            {"name":"Master's degree (following a four - year Bachelor degree)",
+            "standard":"British Master's degree"}]
+        },
+
+        {
+            "name":"Peru",
+            "degrees":[{"name":"Grado de Academico Bachiller",
+            "standard":"British Bachelor (Ordinary) degree standard"},
+            {"name":" Titulo de Licenciado/Titulo (Profesional) de [subject area]",
+            "standard":"British Bachelor degree standard"},
+            {"name":"Titulo de Maestria/Grado Academico de Magister",
+            "standard":"British Master's degree standard"}]
+        },
+
+        {
+            "name":"Portugal",
+            "degrees":[{"name":"Licenciado",
+            "standard":"British Bachelor (Honours) degree standard"},
+            {"name":"Master's degree/Mestrado/Mestre",
+            "standard":"British Master's degree standard"}]
+        },
+
+        {
+            "name":"Romania",
+            "degrees":[{"name":"Diploma de Licenta (Bachelor degree)",
+            "standard":"British Bachelor degree standard"},
+            {"name":"Diploma de Master (Master’s degree)",
+            "standard":"British Master's degree standard"}]
+        },
+
+        {
+            "name":"Russia",
+            "degrees":[{"name":"Bachelor degree/Specialist Diploma",
+            "standard":"British Bachelor (Honours) degree standard"},
+            {"name":"Master's degree",
+            "standard":"British Master's degree standard"}]
+        },
+
+        {
+            "name":"Rwanda",
+            "degrees":[{"name":"Baccalaureat/Diplome de Bachiller",
+            "standard":"GCE Advanced/Scottish Advanced Higher standard"},
+            {"name":"Licence",
+            "standard":" Diploma of Higher Education standard"},
+            {"name":"Ordinary Bachelor degree",
+            "standard":"British Bachelor degree standard"},
+            {"name":"Bachelor degree (Honours)",
+            "standard":"British Bachelor (Honours) degree standard"},
+            {"name":"Master's degree",
+            "standard":"British Master's degree standard"}]
+        },
+
+        {
+            "name":"Sierra Leone",
+            "degrees":[{"name":"Bachelor degree (General)",
+            "standard":"Diploma of Higher Education standard"},
+            {"name":"Bachelor degree (Honours)",
+            "standard":"British Bachelor degree standard"},
+            {"name":"Master's degree","standard":"British Bachelor (Honours) degree standard"}]
+        },
+
+        {
+            "name":"South Africa",
+            "degrees":[{"name":"DipHE",
+            "standard":"British Bachelor (Ordinary) degree standard"},
+            {"name":"BTech/National Higher Diploma",
+            "standard":"British Bachelor (Ordinary) degree standard"},
+            {"name":"Bachelor degree (General)",
+            "standard":"British Bachelor (Ordinary) degree standard"},
+            {"name":"Bachelor degree (Honours)",
+            "standard":"British Bachelor (Honours) degree standard"},
+            {"name":"Master's degree",
+            "standard":"British Master's degree standard"}]
+        },
+
+        {
+            "name":"Spain",
+            "degrees":[{"name":"Titulo de Grade en/Titulo de Licenciado",
+            "standard":"British Bachelor (Honours) degree standard"},
+            {"name":"Titulo de Master",
+            "standard":"British Master's degree standard"}]
+        },
+
+        {
+            "name":"Sudan",
+            "degrees":[{"name":"Bachelor degree",
+            "standard":"British Bachelor degree standard"},
+            {"name":"Master's degree",
+            "standard":"British Master's degree standard"}]
+        },
+
+        {
+            "name":"Swaziland",
+            "degrees":[{"name":"Bachelor degree (awarded on completion of Part 2)",
+            "standard":"Diploma of Higher Education standard"},
+            {"name":"Master's degree",
+            "standard":"British Bachelor (Honours) degree standard"}]
+        },
+
+        {
+            "name":"Tanzania",
+            "degrees":[{"name":"Bachelor degree",
+            "standard":"British Bachelor degree standard"},
+            {"name":"Master's degree",
+            "standard":"British Master's degree standard"}]
+        },
+
+        {
+            "name":"Tunisia",
+            "degrees":[{"name":"Licence/Maitrise",
+            "standard":"British Bachelor degree standard"},
+            {"name":"Master Professionnel/Recherche/Diplome d'Etudes Approfondies",
+            "standard":"British Master's degree standard"}]
+        },
+
+        {
+            "name":"Uganda",
+            "degrees":[{"name":"Bachelor degree",
+            "standard":"British Bachelor degree standard"},
+            {"name":"Master's degree",
+            "standard":"British Master's degree standard"}]
+        },
+
+        {
+            "name":"United States of America",
+            "degrees":[{"name":"Bachelor degree",
+            "standard":"British Bachelor degree standard"},
+            {"name":"Master's degree",
+            "standard":"British Master's degree standard"}]
+        },
+
+        {
+            "name":"Zambia",
+            "degrees":[{"name":"Bachelor degree",
+            "standard":"Diploma of Higher Education standard"},
+            {"name":"Postgraduate Diploma",
+            "standard":"British Bachelor (Ordinary) degree standard"},
+            {"name":"Master's degree",
+            "standard":"British Bachelor (Honours) degree standard"}]
+        },
+
+        {
+            "name":"Zimbabwe",
+            "degrees":[{"name":"Bachelor degree (General)",
+            "standard":"British Bachelor (Ordinary) degree standard"},
+            {"name":"Bachelor degree (Honours)",
+            "standard":"British Bachelor (Honours) degree standard"},
+            {"name":"Master's degree",
+            "standard":"British Master's degree standard"}]
+        }
+    ];
+    
+    // Method for checking degree standard
+    function check(country, data, prev_degree, degree){
+        for (var i = 0; i < data.length; i++ ){
+            if (country === data[i].name){
+                for (var j = 0; j < data[i].degrees.length; j++){
+                    if (data[i].degrees[j].name === prev_degree){
+                        var standard = data[i].degrees[j].standard;
+                        return standard;
+                    }
+                }
+            }
+        }
+    }
+
+    $(document).ready(function(){
+        // index 
+        // data[index].name = name of a country
+        // data[index].degrees[index] = degrees list for a particular country
+        // data[index].degrees[index].name = degree name for a particular country
+        // data[index].degrees[index].standard = standard for a particular degree
+
+        $("#div_id_years_of_field_experience").hide();
+        $("#other").hide();
+        $("#mitfields").hide();
+        $("#div_id_description").hide();
+        $("#id_other_degree").removeAttr("required");
+        $("#id_degree_standard").removeAttr("required");
+        $("#id_description").removeAttr("required");
+
+        // Populating degrees for a particular country <select>...<option></option>...</select> 
+        $("#id_country").change(function(){
+            var country = $("#id_country option:selected").text();
+
+            for (var i = 0; i < data.length; i++ ){
+                if (country === data[i].name){
+                    $("#id_previous_degree > option").each(function(){
+                        var val = $(this).val();
+                        if ($.isNumeric(val)){
+                            $("#id_previous_degree option[value='"+val+"']").remove();		
+                        }
+                    });
+                    for (var j = 0; j < data[i].degrees.length; j++){
+                        $('#id_previous_degree').append("<option value='"+j+"'>"+data[i].degrees[j].name+"</option>");
+                    }
+                    break;
+                }
+
+                else {
+                    $("#id_previous_degree > option").each(function(){
+                        var val = $(this).val();
+                        if ($.isNumeric(val)){
+                            $("#id_previous_degree option[value='"+val+"']").remove();		
+                        }
+                    });
+                }
+            }		
+        });
+
+        $("#id_degree").change(function(){
+            var prev_degree = $("#id_previous_degree option:selected").text();
+            var	degree = $("#id_degree option:selected").text();
+            var	country = $("#id_country option:selected").text();
+            var standard = check(country, data, prev_degree, degree);
+            
+            if (degree === "Honours in Computer Science"){
+                if (standard === "Diploma of Higher Education standard" || standard === "British Bachelor (Ordinary) degree standard" ||
+                    standard === "BTEC/SQA Higher National Diploma (HND) standard/ Foundation degree standard") {
+                    alert("Correct !");
+                }
+
+                else {
+                    alert("You previous degree standard must be equivalent to one of these to apply for Honours: \nGCE Advanced/Scottish Advanced Higher standard\nDiploma of Higher Education standard\nBritish Bachelor (Ordinary) degree standard");
+                }
+            }
+
+            else if (degree === "Masters in Information in Technology"){
+                if (standard === "British Bachelor degree standard" || standard === "British Bachelor (Honours) degree standard"){
+                    alert("Correct !");
+                    $("#mitfields").show();
+                }
+
+                else {
+                    alert("You previous degree standard must be equivalent to one of these to apply for Masters:\nBritish Bachelor degree standard\nBritish Bachelor (Honours) degree standard");
+                    $("#mitfields").hide();
+                    $("#id_description").removeAttr("required");
+                }
+            }
+
+            else if (degree === "Masters by Coursework and Dissertation" || degree === "Masters by Dissertation"){
+                if (standard === "British Bachelor degree standard" || standard === "British Bachelor (Honours) degree standard"){
+                    alert("Correct !");
+                    $("#mitfields").hide();
+                }
+
+                else {
+                    alert("You previous degree standard must be equivalent to one of these to apply for Masters:\nBritish Bachelor degree standard\nBritish Bachelor (Honours) degree standard");
+                    $("#mitfields").hide();
+                    $("#id_description").removeAttr("required");
+                }
+            }
+
+            else if (degree === "PhD in Computer Science"){
+                if (standard === "British Master's degree standard"){
+                    alert("Correct !");
+                }
+
+                else {
+                    alert("You previous degree standard must be equivalent to one of these to apply for Doctorate:\nBritish Master's degree standard");
+                }
+            }
+            
+        });
+
+
+        $("#id_project_component").change(function(){
+            var degree = $("#id_project_component option:selected").text();
+            if (degree === "Yes"){
+                $("#div_id_description").show();
+            }
+
+            else {
+                $("#div_id_description").hide()
+            }
+            
+        });
+
+        $("#id_previous_degree").change(function(){
+            var prev_degree = $("#id_previous_degree option:selected").text();
+            if (prev_degree === "BTech/National Higher Diploma"){
+                $("#div_id_years_of_field_experience").show();
+            }
+
+            else {
+                $("#div_id_years_of_field_experience").hide()
+            }
+            
+        });
+
+        // Other option condition
+        $("#id_previous_degree").change(function(){
+            var opt_degree = $("#id_previous_degree option:selected").text();
+            if (opt_degree === "Other"){
+                $("#other").show();
+            }
+
+            else {
+                $("#other").hide()
+            }
+            
+        });
+    });
+
+</script>

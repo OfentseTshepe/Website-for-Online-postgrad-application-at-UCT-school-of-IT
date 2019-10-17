@@ -1,0 +1,21 @@
+{% extends 'base.html'%}
+
+{% load crispy_forms_tags %}
+    
+{% block content %}
+    
+	<div id="middleContent">
+    	<form action='.' method="post">
+            {% csrf_token %}
+            <h3>Do you want to withdrawn this submission?</h3>
+                <button type="submit" class="btn btn-danger btn-sm">
+					Withdraw<a href=" {% url 'accounts:person-list' %} ">
+				</button>
+				
+				<button type="button" class="btn btn-danger btn-sm">
+					Cancel<a href=" {% url 'accounts:person-list' %} ">
+				</button>     
+        </form>	
+    </div>
+    
+{% endblock %}

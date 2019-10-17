@@ -1,0 +1,33 @@
+{% load static %}
+<!-- Sidebar -->
+<nav id="sidebar">        
+    <div class="sidebar-header">
+        <h3>SITPG <br> Web Tool</h3>
+    </div>
+    <ul class="list-unstyled components">
+        <li>
+            <a href="{% url 'accounts:welcome' %}">Welcome</a>
+        </li>
+        <li>
+            <a href="{% url 'accounts:person-add' %}">Personal Details</a>
+        </li>
+        <li>
+            <a href="{% url 'accounts:address-add' %}">Addresses</a>
+        </li>
+        <li>
+            <a href="{% url 'accounts:degree-add' %}"> Qualifications </a>
+        </li>
+        <li>
+            <a href="{% url 'accounts:degree-add' %}">Study Choice</a>
+        </li>
+        <li>
+            <a href="{% url 'accounts:document-add' %}"> Upload Documents </a>
+        </li>
+        <li>
+            <a href="{% url 'accounts:terms' %}"> Terms </a>
+        </li>
+        <li>
+            <a href="{% url 'accounts:submit' %}"> Submit </a>
+        </li>
+    </ul>
+</nav>

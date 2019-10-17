@@ -1,0 +1,38 @@
+{% extends "base.html" %}
+ 
+{% block title %}
+    Welcome Page - {{ block.super }}
+{% endblock %}
+ 
+{% block content %}
+<div class="main">
+    <div class="mx-auto">
+        <p>&#187; <a href="{% url 'accounts:welcome' %}">Welcome</a></p>
+        <div>
+            <strong>Menu:</strong>
+            <ul>
+                {% if user.is_authenticated %}
+                        <td> Welcome, you are currently logged in as: </td>
+                        <br>
+                        <th><strong> {{ request.user.username }} </strong></th>
+                        <br>
+                        <h5>to continue with application</h5>
+                        <a href="{% url 'accounts:person-add' %}">
+                        <p><strong>click here</strong></a></p>
+                        <div>
+                    <li><a href="{% url 'account_email' %}">Change E-mail</a></li>
+                    <li><a href="{% url 'account_logout' %}">Sign Out</a></li>
+                {% else %}
+                    <li><a href="{% url 'account_login' %}">Sign In</a></li>
+                    <li><a href="{% url 'account_signup' %}">Sign Up</a></li>
+                {% endif %}
+            </ul>
+        </div>
+    </div>
+<div>
+
+{% endblock content %}
+
+<div class="alert alert-primary" role="alert">
+  This is a primary alert with <a href="#" class="alert-link">an example link</a>. Give it a click if you like.
+</div>

@@ -1,0 +1,19 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<h3> your submission </h3>
+    <ol>  
+    {% for person in persons %}
+        <li>
+            {{ person }}
+            <a href="{{ person.get_delete_url }}"> <br> <strong>withdraw | </strong></a>
+            <a href="{{ person.get_update_url }}"><strong>modify</strong></a>
+        </li>
+    {% endfor %}   
+    </ol>
+    <br>
+    <br>
+    <a href="#" class="btn btn-secondary btn-sm disabled" role="button" aria-disabled="true">Previous</a>
+    <a href="{% url 'accounts:address-add' %}" class="btn btn-primary btn-sm" aria-disabled="false">Next</a>
+
+{% endblock content %}

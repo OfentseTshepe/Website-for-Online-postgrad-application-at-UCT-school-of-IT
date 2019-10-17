@@ -1,0 +1,26 @@
+{% extends 'base.html' %}
+
+{% block content %}
+    <p> please read over the terms  
+    <a href="#">
+        <strong>here.</strong></a>
+        <br>
+            <div class="container-fluid">
+                <div class="form-check">
+                    <label class="form-check-label">
+                        <input type="radio" class="form-check-input" name="optradio">Agree
+                    </label>
+                </div>
+                 <div class="form-check">
+                    <label class="form-check-label">
+                        <input type="radio" class="form-check-input" name="optradio">Decline
+                    </label>
+                </div>
+                <br>
+                <button type="button" href="#" 
+                    class="btn btn-success btn-lg">
+                    Submit Application
+                </button>
+            </div>
+    </p>
+{% endblock content %}

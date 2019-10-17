@@ -1,0 +1,14 @@
+{% extends 'base.html'%}
+
+{% load crispy_forms_tags %}
+    
+    {% block content %}
+    
+	<div id="middleContent">
+    	<form method="post">
+            {% csrf_token %}
+            {% crispy form form.helper %}            
+    	</form>	
+    </div>
+    
+    {% endblock %}

@@ -1,0 +1,50 @@
+{% extends "admin/base_site.html" %}
+{% load i18n admin_urls static %}
+
+
+{% comment %} {% block bodyclass %}{{ block.super }} app-{{ opts.app_label }} model-{{ opts.model_name }} delete-confirmation{% endblock %} {% endcomment %}
+{% block bodyclass %}{{ block.super }} app-{{ opts.app_label }} model-{{ opts.model_name }} email-confirmation{% endblock %}
+
+{% block breadcrumbs %}
+<div class="breadcrumbs">
+<a href="{% url 'admin:index' %}">{% trans 'Home' %}</a>
+&rsaquo; <a href="{% url 'admin:app_list' app_label='accounts' %}">{% trans "Accounts" %}</a> 
+&rsaquo; <a href="{% url 'admin:accounts_application_changelist' %}">{% trans "Accounts" %}</a>
+{% comment %} &rsaquo; <a href="{% url 'admin:accounts_user_changelist' %}">{% trans "Users" %}</a> {% endcomment %}
+&rsaquo; <span>Send email</span>
+</div>
+{% endblock %}
+
+{% block content %}
+<p>{% blocktrans %}Send Email here{% endblocktrans %}</p>
+<form method="POST" action="{% url 'accounts:email' %}">{% csrf_token %}
+    <div>
+        <div>
+            <p>{{ form.users.errors }}</p>
+            <p>{{ form.users.label_tag }}</p>
+            <p>
+                {% for user in form.users.initial %}
+                    {{ user.email }}{% if not forloop.last %},&nbsp;{% endif %}
+                {% endfor %}
+            </p>
+            <select name="users" multiple style="display: none">
+                {% for user in form.users.initial %}
+                    <option value="{{ user.id }}" selected>{{ user }}</option>
+                {% endfor %}
+            </select>
+        </div>
+        <div>
+            <p>{{ form.subject.errors }}</p>
+            <p>{{ form.subject.label_tag }}</p>
+            <p>{{ form.subject }}</p>
+        </div>
+        <div>
+            <p>{{ form.message.errors }}</p>
+            <p>{{ form.message.label_tag }}</p>
+            <p>{{ form.message }}</p>
+        </div>
+        <input type="submit" value="{% trans 'Send message' %}" />
+        <a href="{% url 'admin:accounts_application_changelist' %}" class="button cancel-link">{% trans "No, take me back" %}</a>
+    </div>
+</form>
+{% endblock %}

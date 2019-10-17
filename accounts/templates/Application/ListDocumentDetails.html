@@ -1,0 +1,18 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<h3> Listing all person objects here </h3>
+    <ul>  
+    {% for person in persons %}
+        <li>
+            {{ person }}(
+            <a href="{{ person.get_delete_url }}"> <strong>delete</strong></a>
+            <br>
+            <a href="{{ person.get_update_url }}"> <strong>update</strong></a>            
+            {% comment %} {{ person.email }} {% endcomment %}
+        </li>
+    {% endfor %}   
+    </ul>
+
+
+{% endblock content %}

@@ -1,0 +1,16 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<h3> your submission </h3>
+    <ol>  
+    {% for person in My_Application %}
+        <li>
+            <a>  Application ID = </a> {{ person.id }}
+            <a href="{{ person.get_delete_url }}"> <br> <strong>withdraw | </strong></a>
+            <a href="{{ person.get_update_url }}"><strong>modify</strong></a>
+        </li>
+    {% endfor %}   
+    </ol>
+
+
+{% endblock content %}
