@@ -31,7 +31,7 @@ django-rest-auth==0.9.5
 django-select2==7.1.1
 django-smart-selects==1.5.4
 django-suit==0.2.26
-djangorestframework==3.9.4
+djangorestframework==3.11.2
 easy-thumbnails==2.6
 et-xmlfile==1.0.1
 gunicorn==19.9.0
