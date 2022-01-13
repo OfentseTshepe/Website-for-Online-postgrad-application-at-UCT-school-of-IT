@@ -44,7 +44,7 @@ oauthlib==3.0.1
 odfpy==1.4.0
 openpyxl==2.6.3
 pep8==1.7.1
-Pillow==6.1.0
+Pillow==9.0.0
 pycodestyle==2.5.0
 pydot==1.4.1
 pylint==2.3.1
